@@ -346,11 +346,10 @@ class Model
      * Get all model records
      * @return mixed
      */
-    public static function all()
+    public function all()
     {
-        $instance = new static;
 
-        $model = $instance->newQuery()->get();
+        $model = $this->newQuery()->get();
 
         return $model;
     }
@@ -360,11 +359,10 @@ class Model
      * @param $key
      * @return mixed
      */
-    public static function find($key)
+    public function find($key)
     {
-        $instance = new static;
 
-        $model = $instance->newQuery()->id($key)->take(1)->first();
+    	$model = $this->newQuery()->id($key)->take(1)->first();
 
         if ($model) {
             $model->exists = true;
