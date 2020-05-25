@@ -1,7 +1,7 @@
 <?php
 
 namespace Basemkhirat\Elasticsearch;
-
+// th!
 use Illuminate\Support\Str;
 
 /**
